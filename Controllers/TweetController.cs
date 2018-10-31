@@ -18,14 +18,25 @@ namespace Twitter_monitor.Controllers
         searchTweets.configTweet();
       }
 
+      [HttpGet("find/{keyword}")]
+      public IActionResult search (string keyword){
+        try
+          {
+              return Ok(Search.SearchTweets(new SearchTweetsParameters(keyword)));
+          }
+        catch(Exception ex){
+              return BadRequest($"Deu erro: {ex.Message}");
+          }
+      }
+
       [HttpGet]
       public IActionResult search (){
-      try
-        {
-            return Ok(Search.SearchTweets(new SearchTweetsParameters("Kleytonmr")).ToJson());
-        }
-      catch(Exception ex){
-            return BadRequest("Deu erro:" + ex.Message);
+        try
+          {
+              return Ok(Search.SearchTweets(new SearchTweetsParameters("Kleytonmr")));
+          }
+        catch(Exception ex){
+              return BadRequest($"Deu erro: {ex.Message}");
         }
       }
    }

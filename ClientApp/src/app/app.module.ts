@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { TableComponent } from './table/table.component';
 import { UserComponent } from './user/user.component';
 import { TweetsComponent } from './tweets/tweets.component';
+import {TweetService} from './tweet.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { TweetsComponent } from './tweets/tweets.component';
       { path: 'dashboard', component: DashboardComponent},
     ])
   ],
-  providers: [],
+  providers: [TweetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

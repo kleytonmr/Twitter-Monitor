@@ -1,59 +1,51 @@
 <div class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header card-header-primary">
-              <h4 class="card-title ">Tweet Table</h4>
-              <p class="card-category">List of all searched tweets</p>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead class=" text-primary">
-                    <th>
-                      ID
-                    </th>
-                    <th>
-                      Name
-                    </th>
-                    <th>
-                      Text
-                    </th>
-                    <th>
-                      Created it
-                    </th>
-                  </thead>
-                  <ul>
-                    <!-- <li *ngFor="let tweet of tweetsUrl">
-                      
-                    </li> -->
-
-                    {{tweets}} 
-
-                  </ul>
-                  <!-- <tbody >
-                    <tr>
-                      <td>
-                        1
-                      </td>
-                      <td>
-                        Dakota Rice
-                      </td>
-                      <td>
-                        lorem ipsun use kesa 
-                      </td>
-                      <td class="text-primary">
-                        $36,738
-                      </td>
-                    </tr>
-                  </tbody> -->
-                </table>
-              </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Tweet Table</h4>
+            <p class="card-category">List of all searched tweets</p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary" >
+                  <th>
+                    ID
+                  </th>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Text
+                  </th>
+                  <th>
+                    Created it
+                  </th>
+                </thead>
+                <tbody *ngFor="let tweet of tweets" >
+                  <tr>
+                    <td>
+                      {{tweet.tweetDTO.id}}                      
+                    </td>
+                    <td>
+                      {{tweet.tweetDTO.user.name}}                      
+                    </td>
+                    <td>
+                      {{tweet.text}}                      
+                    </td>
+                    <td>
+                      {{tweet.createdAt}}                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
         

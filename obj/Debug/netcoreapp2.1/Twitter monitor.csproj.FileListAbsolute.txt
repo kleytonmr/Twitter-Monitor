@@ -1,0 +1,24 @@
+C:\Users\admin\Documents\Twitter monitor\bin\Debug\netcoreapp2.1\Twitter monitor.deps.json
+C:\Users\admin\Documents\Twitter monitor\bin\Debug\netcoreapp2.1\Twitter monitor.runtimeconfig.json
+C:\Users\admin\Documents\Twitter monitor\bin\Debug\netcoreapp2.1\Twitter monitor.runtimeconfig.dev.json
+C:\Users\admin\Documents\Twitter monitor\bin\Debug\netcoreapp2.1\Twitter monitor.dll
+C:\Users\admin\Documents\Twitter monitor\bin\Debug\netcoreapp2.1\Twitter monitor.pdb
+C:\Users\admin\Documents\Twitter monitor\bin\Debug\netcoreapp2.1\Twitter monitor.Views.dll
+C:\Users\admin\Documents\Twitter monitor\bin\Debug\netcoreapp2.1\Twitter monitor.Views.pdb
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.csprojAssemblyReference.cache
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.RazorAssemblyInfo.cache
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.RazorAssemblyInfo.cs
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.AssemblyInfo.cs
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.TagHelpers.input.cache
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.TagHelpers.output.cache
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.RazorCoreGenerate.cache
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Razor\Pages\Error.g.cshtml.cs
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewImports.g.cshtml.cs
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.RazorTargetAssemblyInfo.cache
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.RazorTargetAssemblyInfo.cs
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.Views.pdb
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.dll
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.pdb
+C:\Users\admin\Documents\Twitter monitor\obj\Debug\netcoreapp2.1\Twitter monitor.csproj.CopyComplete

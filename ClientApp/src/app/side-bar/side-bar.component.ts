@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {TweetService} from '../tweet.service';
+import { TableComponent } from '../table/table.component';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
+  
+  constructor(private twitter: TweetService) {}
+  
+  value = '';
 
-  constructor() { }
-
-  ngOnInit() {
+  onEnter(value: string) { 
+    this.value = value; 
   }
-
+ 
+  ngOnInit():void {
+  }
 }
