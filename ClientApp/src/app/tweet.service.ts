@@ -1,25 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Http, Response} from '@angular/http';
+// import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class TweetService {
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: Http) { }
 
-  tweets: any[];
+  private tweets: any = [];
+  private keywords: string;
+
+  tweetList(){
+    return this.http.get("/api/tweet/find/" + "bolsonaro")
+      .map((response: Response) => this.tweets = response.json());
+  }
 
   getTweets(){
-    return this.tweets
+    return this.tweets;
   }
-  
-  tweetList(keywords:string){
-    return this.http.get("/api/tweet/find/" + keywords)
-      .map((tweet: any[]) =>{
-        this.tweets = tweet;
-        return true;
-    });
+
+  setKeywors(key:string){
+    this.keywords = key;
   }
 }
 
