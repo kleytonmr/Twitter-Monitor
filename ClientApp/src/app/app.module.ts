@@ -13,6 +13,7 @@ import { UserComponent } from './user/user.component';
 import { TweetsComponent } from './tweets/tweets.component';
 import {TweetService} from './tweet.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import {TweetService} from './tweet.service';
     LoginComponent,
     TableComponent,
     UserComponent,
-    TweetsComponent
+    TweetsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

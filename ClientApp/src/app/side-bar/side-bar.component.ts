@@ -12,11 +12,10 @@ export class SideBarComponent implements OnInit {
   constructor(private twitter: TweetService, private table: TableComponent) {}
   
   value = '';
-
+  
   onEnter(value: string) { 
     this.value = value; 
-    this.twitter.setKeywors(value);
-    this.table.call();
+    this.twitter.setKeywors(this.value);
   }
 
   ngOnInit():void {

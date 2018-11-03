@@ -1,6 +1,9 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import {TweetService} from '../tweet.service';
 
+
+
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html', 
@@ -9,13 +12,13 @@ import {TweetService} from '../tweet.service';
 
 @Injectable()
 export class TableComponent implements OnInit {
-  
-  constructor(private twitter:TweetService) { }
 
+  constructor(private twitter:TweetService) { }
+  
   tweets: any = [];
   
-  ngOnInit():void { 
+  ngOnInit() { 
     this.twitter.tweetList()
-      .subscribe(() =>this.tweets = this.twitter.getTweets());    
+      .subscribe(() =>this.tweets = this.twitter.getTweets());
   }
 }

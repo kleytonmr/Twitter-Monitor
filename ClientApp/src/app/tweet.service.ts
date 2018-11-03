@@ -1,18 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ChangeDetectorRef} from '@angular/core';
 import {Http, Response} from '@angular/http';
-// import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class TweetService {
   
-  constructor(private http: Http) { }
+  
+  constructor(private http: Http) { 
+  }
 
   private tweets: any = [];
   private keywords: string;
 
-  tweetList(){
-    return this.http.get("/api/tweet/find/" + "bolsonaro")
+  tweetList() {
+    return this.http.get("/api/tweet/find/" + this.keywords)
       .map((response: Response) => this.tweets = response.json());
   }
 
