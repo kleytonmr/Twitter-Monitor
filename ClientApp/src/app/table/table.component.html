@@ -24,9 +24,9 @@
                     Created it
                   </th>
                 </thead>
-                <tbody *ngFor="let tweet of tweets" >
-                  <tr>
-                    <td>
+                <tbody *ngFor="let tweet of tweets">
+                  <tr *ngIf="show">
+                    <td >
                       {{tweet.id}}                      
                     </td>
                     <td>
