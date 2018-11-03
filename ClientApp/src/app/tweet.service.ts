@@ -1,5 +1,4 @@
 import { Injectable} from '@angular/core';
-// import {Http, Response} from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
@@ -17,12 +16,21 @@ export class TweetService {
     return this.http.get('/api/tweet/find/' + this.keywords);
   }
 
+  loadTweets(){
+    this.tweetList().subscribe(
+      tweets => {this.tweets = tweets },
+      err => console.error(err),
+      () => console.log('done loading tweets')
+    );
+  }
+
   getTweets(){
     return this.tweets;
   }
 
   setKeywors(key:string){
     this.keywords = key;
+    this.loadTweets();
   }
 }
 

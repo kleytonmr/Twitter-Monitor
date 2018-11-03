@@ -2,8 +2,6 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import {TweetService} from '../tweet.service';
 
 
-
-
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html', 
@@ -18,15 +16,7 @@ export class TableComponent implements OnInit {
   tweets: any = [];
   public show = true;
 
-  tweetList(){
-    this.twitter.tweetList().subscribe(
-      teste => {this.tweets = teste },
-      err => console.error(err),
-      () => console.log('done loading tweets')
-    );
-  }
-
   ngOnInit() { 
-    this.tweetList();
+    this.tweets = this.twitter.getTweets();
   }
 }
