@@ -24,8 +24,8 @@
                     Created it
                   </th>
                 </thead>
-                <tbody *ngFor="let tweet of tweets">
-                  <tr *ngIf="show">
+                <tbody *ngFor="let tweet of tweets; trackBy: ngOnInit()">
+                  <tr>
                     <td >
                       {{tweet.id}}                      
                     </td>

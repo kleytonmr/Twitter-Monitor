@@ -14,7 +14,6 @@ export class TableComponent implements OnInit {
   constructor(private twitter:TweetService) { }
   
   tweets: any = [];
-  public show = true;
 
   ngOnInit() { 
     this.tweets = this.twitter.getTweets();

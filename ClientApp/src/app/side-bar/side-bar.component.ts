@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
 import {TweetService} from '../tweet.service';
 import { TableComponent } from '../table/table.component';
 
@@ -11,16 +9,11 @@ import { TableComponent } from '../table/table.component';
 })
 export class SideBarComponent implements OnInit {
   
-  constructor(private twitter: TweetService, private table: TableComponent, private router: Router) {}
-  
-  value = '';
+  constructor(private twitter: TweetService) {}
   
   onEnter(value: string) { 
-    this.value = value; 
-    this.twitter.setKeywors(this.value);
+    this.twitter.setKeywors(value);
   }
-
-
 
   ngOnInit():void {
   }
