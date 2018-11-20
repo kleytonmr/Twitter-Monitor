@@ -2679,6 +2679,15 @@
           "lib/netstandard1.4/Nito.Disposables.dll": {}
         }
       },
+      "Oracle.ManagedDataAccess.Core/2.18.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -7069,6 +7078,19 @@
         "lib/netstandard1.4/Nito.Disposables.dll",
         "nitoasyncex.context.strongname.1.1.0.nupkg.sha512",
         "nitoasyncex.context.strongname.nuspec"
+      ]
+    },
+    "Oracle.ManagedDataAccess.Core/2.18.3": {
+      "sha512": "YWpsNnGbLt5CjpfHzt9RUZbp8CPC5AOkeATSY10WICit9TYtkt3cLBP1i7o1b1jHJen6JWwYrxGRG0BTeN9D/Q==",
+      "type": "package",
+      "path": "oracle.manageddataaccess.core/2.18.3",
+      "files": [
+        ".signature.p7s",
+        "info.txt",
+        "lib/netstandard2.0/Oracle.ManagedDataAccess.dll",
+        "oracle.manageddataaccess.core.2.18.3.nupkg.sha512",
+        "oracle.manageddataaccess.core.nuspec",
+        "readme.txt"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -11690,6 +11712,7 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.SpaServices.Extensions >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Oracle.ManagedDataAccess.Core >= 2.18.3",
       "TweetinviAPI >= 4.0.0"
     ]
   },
@@ -11756,6 +11779,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Oracle.ManagedDataAccess.Core": {
+            "target": "Package",
+            "version": "[2.18.3, )"
           },
           "TweetinviAPI": {
             "target": "Package",

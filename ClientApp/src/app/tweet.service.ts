@@ -14,7 +14,7 @@ export class TweetService {
   private keywords: string;
 
   tweetList(){
-    return this.http.get('http://localhost:5002/api/text/' + this.keywords);
+    return this.http.get('http://localhost:5002/api/score/' + this.keywords);
   }
 
   loadTweets(){
@@ -29,27 +29,9 @@ export class TweetService {
     return this.tweets;
   }
 
-  scoreList(){
-    return this.http.get('http://localhost:5002/api/score/' + this.keywords);
-  }
-
-  loadScore(){
-    this.scoreList().subscribe(
-      score => {this.score = score },
-      err => console.error(err),
-      () => console.log('done loading score')
-    );
-  }
-
-  getScore(){
-    console.log(this.score)
-    return this.score;
-  }
-
   setKeywors(key:string){
     this.keywords = key;
     this.loadTweets();
-    this.loadScore();
   }
 }
 

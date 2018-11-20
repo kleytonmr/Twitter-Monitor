@@ -47,6 +47,7 @@ declare var require:any;
       { path: 'historic', component: HistoricComponent},
       { path: 'dashboard', component: DashboardComponent},
       { path: 'chart-teste', component: ChartTesteComponent},
+      { path: '', redirectTo: '/table', pathMatch: 'full' },
     ])
   ],
   providers: [TweetService, TableComponent],
