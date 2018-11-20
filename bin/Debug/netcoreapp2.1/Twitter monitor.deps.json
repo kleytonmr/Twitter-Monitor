@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "b6b588c1e79af3c4d6d6f079486f51a724d48007"
+    "signature": "e6595f925e64a2a3713753c86896a28c6ab617c1"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "Twitter monitor/1.0.0": {
         "dependencies": {
           "CodingUpAStorm.VaderSharp": "1.0.4",
+          "Microsoft.AspNet.SignalR": "2.4.0-preview2-20181018-02",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.SpaServices.Extensions": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
@@ -66,6 +67,7 @@
           "lib/netstandard1.3/VaderSharp.dll": {}
         }
       },
+      "Microsoft.AspNet.SignalR/2.4.0-preview2-20181018-02": {},
       "Microsoft.NETCore.App/2.1.0": {
         "dependencies": {
           "Microsoft.NETCore.DotNetHostPolicy": "2.1.0",
@@ -3293,6 +3295,13 @@
       "sha512": "sha512-CzqATEidMnjrQ5WTyJPXQ99WV0W2d8QbsAWJ58GaNbUAisPdO/6qXqlqArueYuAJqkl1sdUx+vL37Ix8epbIAg==",
       "path": "codingupastorm.vadersharp/1.0.4",
       "hashPath": "codingupastorm.vadersharp.1.0.4.nupkg.sha512"
+    },
+    "Microsoft.AspNet.SignalR/2.4.0-preview2-20181018-02": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9YQF7q/2MUZKwhd4ua9K/FcCH7STo+4f58vkFtlv1dOTAM7i1N5LffPJDxk+V535yx9Mz7H31qE2P7R7/rrciA==",
+      "path": "microsoft.aspnet.signalr/2.4.0-preview2-20181018-02",
+      "hashPath": "microsoft.aspnet.signalr.2.4.0-preview2-20181018-02.nupkg.sha512"
     },
     "Microsoft.NETCore.App/2.1.0": {
       "type": "package",

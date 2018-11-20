@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content"  >
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -12,7 +12,7 @@
               <table class="table">
                 <thead class=" text-primary" >
                   <th>
-                    ID
+                    <!-- ID -->
                   </th>
                   <th>
                     <!-- Name -->
@@ -21,22 +21,22 @@
                     Text
                   </th>
                   <th>
-                    Created it
+                    <!-- Created it -->
                   </th>
                 </thead>
                 <tbody *ngFor="let tweet of tweets; trackBy: ngOnInit()">
                   <tr>
                     <td >
-                      {{tweet.id}}                      
+                      <!-- {{tweet.id}}                       -->
                     </td>
                     <td>
                       <!-- {{tweet.name}}                       -->
                     </td>
                     <td>
-                      {{tweet.text}}                      
+                      {{tweet}}                      
                     </td>
                     <td>
-                      {{tweet.createdAt}}                      
+                      <!-- {{tweet.createdAt}}                       -->
                     </td>
                   </tr>
                 </tbody>

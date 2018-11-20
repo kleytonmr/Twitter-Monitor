@@ -27,6 +27,9 @@
           "lib/netstandard1.3/VaderSharp.dll": {}
         }
       },
+      "Microsoft.AspNet.SignalR/2.4.0-preview2-20181018-02": {
+        "type": "package"
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4443,6 +4446,16 @@
         "lib/net35/VaderSharp.xml",
         "lib/netstandard1.3/VaderSharp.dll",
         "lib/netstandard1.3/VaderSharp.xml"
+      ]
+    },
+    "Microsoft.AspNet.SignalR/2.4.0-preview2-20181018-02": {
+      "sha512": "9YQF7q/2MUZKwhd4ua9K/FcCH7STo+4f58vkFtlv1dOTAM7i1N5LffPJDxk+V535yx9Mz7H31qE2P7R7/rrciA==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr/2.4.0-preview2-20181018-02",
+      "files": [
+        ".signature.p7s",
+        "microsoft.aspnet.signalr.2.4.0-preview2-20181018-02.nupkg.sha512",
+        "microsoft.aspnet.signalr.nuspec"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -11673,6 +11686,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "CodingUpAStorm.VaderSharp >= 1.0.4",
+      "Microsoft.AspNet.SignalR >= 2.4.0-preview2-20181018-02",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.SpaServices.Extensions >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
@@ -11723,6 +11737,10 @@
           "CodingUpAStorm.VaderSharp": {
             "target": "Package",
             "version": "[1.0.4, )"
+          },
+          "Microsoft.AspNet.SignalR": {
+            "target": "Package",
+            "version": "[2.4.0-preview2-20181018-02, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",

@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net;
+using System.IO;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var requisicaoWeb = WebRequest.CreateHttp("http://127.0.0.1:5002/api/score/Bolsonaro");
+            requisicaoWeb.Method = "GET";
+            requisicaoWeb.UserAgent = "RequisicaoWebDemo";
+
+            using (var resposta = requisicaoWeb.GetResponse())
+            {
+                var streamDados = resposta.GetResponseStream();
+                StreamReader reader = new StreamReader(streamDados);
+                object objResponse = reader.ReadToEnd();
+                Console.WriteLine(objResponse.ToString());
+                Console.ReadLine();
+                streamDados.Close();
+                resposta.Close();
+            }
+            Console.ReadKey();
+        }
+    }
+}

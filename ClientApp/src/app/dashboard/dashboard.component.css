@@ -1,0 +1,24 @@
+chart{
+    display: block;
+}
+
+#positive {
+    width: 100%;
+    height: 250px;
+ }
+  
+#negative {
+    width: 100%;
+    height: 250px;
+  }
+
+  #container {
+	height: 400px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.highcharts-color-1 tspan{
+    fill: white;
+}
+
