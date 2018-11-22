@@ -1,0 +1,60 @@
+.navbar .collapse .navbar-nav .nav-item .nav-link .fa, .navbar .collapse .navbar-nav .nav-item .nav-link .material-icons {
+    font-size: 3rem;
+    max-width: 24px;
+}
+
+.dropdown-menu .dropdown-item, .dropdown-menu li>a {
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-flow: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #333;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.8125rem;
+    border-radius: .125rem;
+    margin: 0 .3125rem;
+    -webkit-transition: all .15s linear;
+    transition: all .15s linear;
+    min-width: 7rem;
+    padding: .625rem 1.25rem;
+    overflow: hidden;
+    line-height: 1.428571;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.dropdown-menu {
+    min-width: 18rem;
+}
+
+.bmd-form-group .form-control, .bmd-form-group input::placeholder, .bmd-form-group label {
+    line-height: 2.1;
+}
+
+.form-control {
+    font-size: 16px;
+}
+
+.bmd-form-group .bmd-label-static {
+    top: .35rem;
+    left: 0;
+    font-size: 1rem;
+}
+.space-left{
+    margin-left: 4rem;
+}
+
+.space-span{
+    margin-left: 1.9rem;
+}
+
+.dropdown-menu[_ngcontent-c3] .dropdown-item[_ngcontent-c3], .dropdown-menu[_ngcontent-c3] li[_ngcontent-c3] > a[_ngcontent-c3] {
+		color: #adadad;
+}
+
+.dropdown-menu span:hover{
+	color: white;
+}

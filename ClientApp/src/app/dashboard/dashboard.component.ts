@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   score: any = [];
   positive: Object;
   negative: Object;
+  p: any = [];
 
   setPositive(p){
     //Gráfico positivo 
@@ -58,7 +59,7 @@ export class DashboardComponent implements OnInit {
 
       series: [{
         name:'Score',
-        data: [52,43, 137, 69, 97, p],
+        data: p,
         color: '#fff'
       }],
     };
@@ -115,7 +116,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.score = this.twitter.getTweets().score;
-    this.setPositive(this.score[0]);
+    for(var i = 0; i < 10; i++){
+      this.p.push(this.score[0])
+    }
+    this.setPositive(this.p);
     this.setNegative(this.score[1]);   
   }
 }

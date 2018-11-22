@@ -12,6 +12,12 @@ export class SideBarComponent implements OnInit {
   
   onEnter(value: string) { 
     this.twitter.setKeywors(value);
+    // setTimeout(() => {
+    // }, 1000);
+  }
+
+  setTime(value: number) { 
+    this.setTime(value);
   }
 
   ngOnInit():void {

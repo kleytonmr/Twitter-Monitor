@@ -10,8 +10,8 @@ export class TweetService {
   }
 
   private tweets: any = [];
-  private score: any = [];
   private keywords: string;
+  private time: number;
 
   tweetList(){
     return this.http.get('http://localhost:5002/api/score/' + this.keywords);
@@ -32,6 +32,14 @@ export class TweetService {
   setKeywors(key:string){
     this.keywords = key;
     this.loadTweets();
+  }
+
+  setTime(value:number){
+    this.time = value;
+  }
+
+  getTime(){
+    return this.time;
   }
 }
 

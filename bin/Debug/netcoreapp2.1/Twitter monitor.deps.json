@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "e6595f925e64a2a3713753c86896a28c6ab617c1"
+    "signature": "2a2414cf5f92fca879488a5e3e7e5fd9c30b2c9b"
   },
   "compilationOptions": {
     "defines": [
@@ -29,6 +29,7 @@
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.SpaServices.Extensions": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
+          "Oracle.ManagedDataAccess.Core": "2.18.3",
           "TweetinviAPI": "4.0.0"
         },
         "runtime": {
@@ -258,6 +259,17 @@
           "lib/netstandard1.4/Nito.AsyncEx.Context.dll": {},
           "lib/netstandard1.4/Nito.AsyncEx.Tasks.dll": {},
           "lib/netstandard1.4/Nito.Disposables.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess.Core/2.18.3": {
+        "runtime": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {
+            "assemblyVersion": "2.0.18.3",
+            "fileVersion": "2.0.18.3"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
         }
       },
       "System.ComponentModel/4.0.1": {
@@ -3358,6 +3370,13 @@
       "sha512": "sha512-GSqIKq7tN2f7DmA6e6W5AH4P8mrEe/+Z8s0yJtkEkxLeRQqiscPp7jmYshrg1/Zl6cUidv6H8gYRrZgw6pc61A==",
       "path": "nitoasyncex.context.strongname/1.1.0",
       "hashPath": "nitoasyncex.context.strongname.1.1.0.nupkg.sha512"
+    },
+    "Oracle.ManagedDataAccess.Core/2.18.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YWpsNnGbLt5CjpfHzt9RUZbp8CPC5AOkeATSY10WICit9TYtkt3cLBP1i7o1b1jHJen6JWwYrxGRG0BTeN9D/Q==",
+      "path": "oracle.manageddataaccess.core/2.18.3",
+      "hashPath": "oracle.manageddataaccess.core.2.18.3.nupkg.sha512"
     },
     "System.ComponentModel/4.0.1": {
       "type": "package",
