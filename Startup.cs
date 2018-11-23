@@ -48,7 +48,15 @@ namespace Twitter_monitor
             app.UseCors("CorsPolicy");
             app.UseSignalR(routes =>
             {
-                routes.MapHub<teste>("/positive");
+                routes.MapHub<Positive>("/positive");
+                routes.MapHub<Negative>("/negative");
+            });
+
+                 app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller}/{action=Index}/{id?}");
             });
 
             if (env.IsDevelopment())
@@ -64,13 +72,7 @@ namespace Twitter_monitor
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
-            });
+       
 
             app.UseSpa(spa =>
             {

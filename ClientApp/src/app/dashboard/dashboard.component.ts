@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import {TweetService} from '../tweet.service';
+import { SideBarComponent } from '../side-bar/side-bar.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,14 +11,12 @@ import {TweetService} from '../tweet.service';
 @Injectable()
 export class DashboardComponent implements OnInit {
 
-  constructor(private twitter:TweetService) {}
+  constructor(private sdbar: SideBarComponent) {}
 
-  score: any = [];
   positive: Object;
   negative: Object;
-  p: any = [];
 
-  setPositive(p){
+  getPositive(){
     //Gráfico positivo 
     this.positive = {
       title: {
@@ -59,13 +58,13 @@ export class DashboardComponent implements OnInit {
 
       series: [{
         name:'Score',
-        data: p,
+        data: this.sdbar.getP(),
         color: '#fff'
       }],
     };
   }
 
-  setNegative(n){
+  getNegative(){
     // Gráfico negativo
     this.negative = {
       title: {
@@ -108,18 +107,21 @@ export class DashboardComponent implements OnInit {
 
       series: [{
         name:'Score',
-        data: [53, 503, 77, 69, 97,n],
+        data: this.sdbar.getN(),
         color: '#fff'
       }],
     };
   }
 
+  // appendScoreP(){
+  //   setInterval(() => {
+  //     this.ngOnInit();
+  //   }, 2000);
+  // }
+  
+  
   ngOnInit() {
-    this.score = this.twitter.getTweets().score;
-    for(var i = 0; i < 10; i++){
-      this.p.push(this.score[0])
-    }
-    this.setPositive(this.p);
-    this.setNegative(this.score[1]);   
+    this.getPositive();
+    this.getNegative();
   }
 }

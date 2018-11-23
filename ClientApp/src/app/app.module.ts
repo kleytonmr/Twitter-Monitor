@@ -50,7 +50,7 @@ declare var require:any;
       { path: '', redirectTo: '/table', pathMatch: 'full' },
     ])
   ],
-  providers: [TweetService, TableComponent],
+  providers: [TweetService, TableComponent, DashboardComponent, SideBarComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

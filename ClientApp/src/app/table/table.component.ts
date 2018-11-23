@@ -13,7 +13,7 @@ export class TableComponent implements OnInit {
   constructor(private twitter:TweetService) { }
   
   tweets: any = [];
-
+  
   ngOnInit() { 
     this.tweets = this.twitter.getTweets().text;
   }

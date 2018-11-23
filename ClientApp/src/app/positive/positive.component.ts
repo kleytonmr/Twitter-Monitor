@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TweetService } from '../tweet.service';
+import {HubConnection, HubConnectionBuilder} from '@aspnet/signalr';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-positive',
@@ -6,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./positive.component.css']
 })
 export class PositiveComponent implements OnInit {
+  public connection : HubConnection;
 
-  constructor() {
-    
+  constructor(private twitter:TweetService) {
+    const builder = new HubConnectionBuilder();
+    this.connection = builder.withUrl('https://localhost:5001/positive').build();
+  }
+
+  score: any = [];
+  positive: Object;
+  p: any = [];
+
+  setPositive(p){
     //Gráfico positivo 
     this.positive = {
       title: {
@@ -50,14 +62,27 @@ export class PositiveComponent implements OnInit {
 
       series: [{
         name:'Score',
-        data: [52503,43934, 137133, 69658, 97031, 119931,57177],
+        data: p,
         color: '#fff'
       }],
     };
   }
 
-  positive: Object;
+  loadData(){
+    this.score = this.twitter.getTweets().score;
+    for(var i = 0; i < 10; i++){
+      this.p.push(this.score[0])
+    }
+    this.setPositive(this.p);
+  }
 
   ngOnInit() {
+    this.connection.start()
+     .then(()=> {
+       this.connection.on('getScore', (value)=>{
+          console.log(value)
+       })
+       this.connection.invoke('getScore');
+     }) ;
   }
 }
