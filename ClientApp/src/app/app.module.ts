@@ -17,6 +17,7 @@ import { NegativeComponent } from './negative/negative.component';
 import { HistoricComponent } from './historic/historic.component';
 import {TweetService} from './tweet.service';
 import { ChartTesteComponent } from './chart-teste/chart-teste.component';
+import { ExportExcelService } from './export-excel.service';
 declare var require:any;
 
 
@@ -50,7 +51,7 @@ declare var require:any;
       { path: '', redirectTo: '/table', pathMatch: 'full' },
     ])
   ],
-  providers: [TweetService, TableComponent, DashboardComponent, SideBarComponent],
+  providers: [TweetService, TableComponent, DashboardComponent, SideBarComponent, ExportExcelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,8 +7,8 @@
             <div class="card-icon">
               <i class="material-icons">sentiment_very_satisfied</i>
             </div>
-            <p class="card-category">Positive analysis</p>
-            <h3 class="card-title">55%</h3>
+            <p class="card-category">Análise Positiva</p>
+            <h3 class="card-title">{{percentPositive}}%</h3>
           </div>
           <div class="card-footer">
             <div class="stats">
@@ -23,9 +23,9 @@
             <div class="card-icon">
               <i class="material-icons">calendar_today</i>
             </div>
-            <p class="card-category">Historic</p>
-            <h3 class="card-title">30/40
-              <small>days</small>
+            <p class="card-category">Histórico</p>
+            <h3 class="card-title">7
+              <small>dias</small>
             </h3>
           </div>
           <div class="card-footer">
@@ -42,8 +42,8 @@
             <div class="card-icon">
               <i class="fa fa-twitter"></i>
             </div>
-            <p class="card-category">Number of tweets</p>
-            <h3 class="card-title">205</h3>
+            <p class="card-category">Número de tweets</p>
+            <h3 class="card-title">{{totalofTweets}}</h3>
           </div>
           <div class="card-footer">
             <div class="stats">
@@ -58,8 +58,8 @@
             <div class="card-icon">
               <i class="material-icons">sentiment_very_dissatisfied</i>
             </div>
-            <p class="card-category">Negative analysis</p>
-            <h3 class="card-title">45%</h3>
+            <p class="card-category">Análise Negativa</p>
+            <h3 class="card-title">{{percentNegative}}%</h3>
           </div>
           <div class="card-footer">
             <div class="stats">
@@ -78,9 +78,9 @@
               <chart id="positive"  [options]="positive"> </chart> 
             </div>
             <div class="card-body">
-              <h4 class="card-title">Positive score</h4>
+              <h4 class="card-title">Pontuação positiva</h4>
               <p class="card-category">
-                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> Last Campaign Performance</p>
+                <span class="text-success"><i class="fa fa-long-arrow-up"></i> {{percentPositive}}% </span> Resultados da ultima pesquisa</p>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -91,33 +91,16 @@
         </a>
       </div>
       <div class="col-md-6">
-        <!-- <a href="" [routerLink]="[ '/negative']" > -->
+        <a href="" [routerLink]="[ '/negative']" >
           <div class="card card-chart">
             <div class="card-header card-header-danger">
               <!-- <div class="ct-chart" id="completedTasksChart"></div> -->
               <chart id="negative"  [options]="negative"> </chart> 
             </div>
             <div class="card-body">
-              <h4 class="card-title">Negative score</h4>
-              <p class="card-category">Last Campaign Performance</p>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <i class="material-icons">access_time</i> campaign sent 2 days ago
-              </div>
-            </div>
-          </div>
-        <!-- </a> -->
-      </div>
-      <!-- <div class="col-md-4">
-        <a href="" [routerLink]="[ '/historic']" >
-          <div class="card card-chart">
-            <div class="card-header card-header-warning">
-              <div class="ct-chart" id="websiteViewsChart"></div>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title">Historic</h4>
-              <p class="card-category">Last Campaign Performance</p>
+              <h4 class="card-title">Pontuação Negativa</h4>
+              <p class="card-category">
+                  <span class="text-danger"><i class="fa fa-long-arrow-down"></i> {{percentNegative}}% </span> Resultados da ultima pesquisa</p>
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -126,7 +109,24 @@
             </div>
           </div>
         </a>
-      </div> -->
+      </div>
+      <div class="col-md-12">
+        <div class="card card-chart">
+          <div class="card-header card-header-warning">
+              <chart id="neutral"  [options]="neutral"> </chart> 
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Pontuação neutra</h4>
+            <p class="card-category">
+                <span class="text-warning"><i class="fa fa-long-arrow-up"></i> {{percentNeutral}}% </span> Resultados da ultima pesquisa</p>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <i class="material-icons">access_time</i> campaign sent 2 days ago
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

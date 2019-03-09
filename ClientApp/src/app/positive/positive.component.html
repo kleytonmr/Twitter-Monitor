@@ -2,21 +2,24 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-          <div class="card card-chart">
-            <div class="card-header card-header-success">
-              <chart id="positive"  [options]="positive"> </chart> 
-            </div>
-            <div class="card-body">
-              <h4 class="card-title">Positive score</h4>
-              <p class="card-category">
-                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> Last Campaign Performance</p>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <i class="material-icons">access_time</i> updated 4 minutes ago
+          <a href="" [routerLink]="[ '/positive']" onclick="md.initDashboardPageCharts()">
+            <div class="card card-chart">
+              <div class="card-header card-header-success">
+                <!-- <div  class="ct-chart" id="dailySalesChart"></div> -->
+                <chart id="positive"  [options]="positive"> </chart> 
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Pontuação positiva</h4>
+                <p class="card-category">
+                  <span class="text-success"><i class="fa fa-long-arrow-up"></i> {{percentPositive}}% </span> Resultados da ultima pesquisa</p>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> updated 4 minutes ago
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
      </div>
    </div>

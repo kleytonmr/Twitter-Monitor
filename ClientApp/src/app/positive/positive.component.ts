@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TweetService } from '../tweet.service';
 import {HubConnection, HubConnectionBuilder} from '@aspnet/signalr';
 import { ThrowStmt } from '@angular/compiler';
+import { SideBarComponent } from '../side-bar/side-bar.component';
 
 @Component({
   selector: 'app-positive',
@@ -11,16 +12,17 @@ import { ThrowStmt } from '@angular/compiler';
 export class PositiveComponent implements OnInit {
   public connection : HubConnection;
 
-  constructor(private twitter:TweetService) {
+  constructor(private sdbar : SideBarComponent) {
     const builder = new HubConnectionBuilder();
     this.connection = builder.withUrl('https://localhost:5001/positive').build();
   }
-
-  score: any = [];
+  
   positive: Object;
-  p: any = [];
+  totalofTweets = this.sdbar.sumTweets();
+  percentPositive = ((this.sdbar.getTotalPositive()/this.sdbar.sumTweets()) * 100).toFixed(2);
+  score :number;
 
-  setPositive(p){
+  getPositive(){
     //Gráfico positivo 
     this.positive = {
       title: {
@@ -62,27 +64,23 @@ export class PositiveComponent implements OnInit {
 
       series: [{
         name:'Score',
-        data: p,
+        data: this.sdbar.getP(),
         color: '#fff'
       }],
     };
   }
 
-  loadData(){
-    this.score = this.twitter.getTweets().score;
-    for(var i = 0; i < 10; i++){
-      this.p.push(this.score[0])
-    }
-    this.setPositive(this.p);
-  }
 
   ngOnInit() {
+    this.getPositive();
+    var t = [1232,3232,3232,323]
+    this.connection.invoke('SetScore', t);
+
     this.connection.start()
      .then(()=> {
-       this.connection.on('getScore', (value)=>{
-          console.log(value)
-       })
-       this.connection.invoke('getScore');
-     }) ;
+       this.connection.on('broadcastScore', (value)=>{
+          this.score = value
+       });
+     });
   }
 }

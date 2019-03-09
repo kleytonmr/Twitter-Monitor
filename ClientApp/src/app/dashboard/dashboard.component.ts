@@ -15,12 +15,18 @@ export class DashboardComponent implements OnInit {
 
   positive: Object;
   negative: Object;
+  neutral:  Object;
 
+  totalofTweets = this.sdbar.sumTweets();
+  percentPositive = ((this.sdbar.getTotalPositive()/this.sdbar.sumTweets()) * 100).toFixed(2);
+  percentNegative = ((this.sdbar.getTotalNegative()/this.sdbar.sumTweets()) * 100).toFixed(2);
+  percentNeutral = ((this.sdbar.getTotalNeutral()/this.sdbar.sumTweets()) * 100).toFixed(2);
+  
   getPositive(){
     //Gráfico positivo 
     this.positive = {
       title: {
-        text:'Positive', 
+        text:'Positivo', 
           style: {
             color: '#FFF',
       }},
@@ -68,7 +74,7 @@ export class DashboardComponent implements OnInit {
     // Gráfico negativo
     this.negative = {
       title: {
-        text:'Negative', 
+        text:'Negativo', 
           style: {
             color: '#FFF',
       }},
@@ -113,15 +119,59 @@ export class DashboardComponent implements OnInit {
     };
   }
 
-  // appendScoreP(){
-  //   setInterval(() => {
-  //     this.ngOnInit();
-  //   }, 2000);
-  // }
-  
+  getNeutral(){
+    //Gráfico positivo 
+    this.neutral = {
+      title: {
+        text:'Neutra', 
+          style: {
+            color: '#FFF',
+      }},
+
+      chart: {
+        backgroundColor: '#00000000',
+      },
+
+      xAxis: {
+        labels: {
+            style: {
+                color: 'white',
+                fontSize: "16px"
+            }
+        }
+      },
+
+      yAxis: {
+        labels: {
+            style: {
+                color: 'white',
+                fontSize: "16px"
+            }
+        }
+      },
+
+      plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false,
+            },
+          pointStart: 1
+        }
+      },
+
+      series: [{
+        name:'Score',
+        data: this.sdbar.getNt(),
+        color: '#fff'
+      }],
+    };
+  }
+
   
   ngOnInit() {
+    this.getNeutral();
     this.getPositive();
     this.getNegative();
+    
   }
 }

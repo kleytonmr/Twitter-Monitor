@@ -8,11 +8,19 @@ using System.Threading.Tasks;
 
 namespace Twitter_monitor
 {
+    public static class PositiveScore{
+        public static int score;
+    }
     public class Positive : Hub
     {
-     public async Task getScore()
-     {
-         await Clients.Caller.SendAsync("getScore", 100);
+        
+    public async Task BroadcastScore(){
+         await Clients.All.SendAsync("broadcastScore", PositiveScore.score);
+     }
+
+     public async Task SetScore(int s){
+         PositiveScore.score = s;
+         await BroadcastScore();
      }
     } 
 }
